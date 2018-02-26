@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hudson Commercial</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <BODY>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark flex-row">
+        <a class="navbar-brand mr-auto" href="/">
+            <h3 class="navbar-brand" >Hudson Commercial</h3>
+        </a>
+        <ul class="navbar-nav flex-row mr-lg-0">
+            <li class="nav-item">
+                 <a class="nav-link pr-2"><i class="fa fa-search"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pr-2"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i><span class="ion-android-apps"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="">User</a>
+                    <a class="dropdown-item" href="">Login</a>
+                </div>
+            </li>
+        </ul>
+        <button class="navbar-toggler ml-lg-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+<div>
+
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+
+
+<%= yield :top_content %>
+
+
+
+<%= yield %>
+
+  </head>
+
+  <body>
+
+  </body>
+</html>
